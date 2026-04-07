@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "PlainFacts Quick Briefs",
+  "version": "0.1.0",
+  "description": "Search PlainFacts from a Chrome extension popup.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PlainFacts"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["http://*/*", "https://*/*"]
+}

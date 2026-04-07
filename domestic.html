@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PlainFacts — Domestic news</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script>window.API_BASE = `${location.origin}/api`;</script>
+</head>
+<body data-page="domestic">
+  <div class="wrap">
+    
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">PF</div>
+        <div>
+          <div class="title">PlainFacts</div>
+          <div class="sub">Domestic news, ordered by importance.</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="/index.html" class="">Home</a>
+        <a href="/global.html" class="">Global</a>
+        <a href="/domestic.html" class="active">Domestic</a>
+        <a href="/economy.html" class="">Economy</a>
+        <a href="/markets.html" class="">Markets</a>
+        <a href="/contact.html" class="">Contact</a>
+        <a href="/share.html" class="">Share</a>
+        <a href="/account.html" class="">Account</a>
+      </nav>
+    </header>
+    
+    
+    <section class="panel sectionHead outline-domestic">
+      <h1>Domestic news</h1>
+      <p>Domestic news, ordered by importance.</p>
+      <div class="searchRow">
+        <select id="searchMode" class="select"><option value="news" selected>News</option><option value="markets">Markets</option></select>
+        <input id="searchInput" class="input" placeholder="Search" />
+        <button id="goBtn" class="btn">Search</button>
+      </div>
+      <div id="statusLine" class="small"></div>
+    </section>
+    <section id="list" class="list"></section>
+    
+    
+    <div id="modal" class="modal" hidden>
+      <div class="modalBack"></div>
+      <div id="modalBody" class="modalCard"></div>
+    </div>
+    
+    <footer>PlainFacts • plainfacts.org</footer>
+  </div>
+  <script src="/js/app.js"></script>
+</body>
+</html>

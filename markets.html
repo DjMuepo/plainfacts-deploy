@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PlainFacts — Markets</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script>window.API_BASE = `${location.origin}/api`;</script>
+</head>
+<body data-page="markets">
+  <div class="wrap">
+    
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">PF</div>
+        <div>
+          <div class="title">PlainFacts</div>
+          <div class="sub">Markets without hype.</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="/index.html" class="">Home</a>
+        <a href="/global.html" class="">Global</a>
+        <a href="/domestic.html" class="">Domestic</a>
+        <a href="/economy.html" class="">Economy</a>
+        <a href="/markets.html" class="active">Markets</a>
+        <a href="/contact.html" class="">Contact</a>
+        <a href="/share.html" class="">Share</a>
+        <a href="/account.html" class="">Account</a>
+      </nav>
+    </header>
+    
+    
+<section class="panel hero">
+  <h1>Markets</h1>
+  <p>Stocks, ETFs, crypto, and a live feed in a simple format.</p>
+  <div class="searchRow">
+    <select id="searchMode" class="select"><option value="markets" selected>Markets</option><option value="news">News</option></select>
+    <input id="searchInput" class="input" placeholder="Search company or symbol" />
+    <button id="goBtn" class="btn">Search</button>
+  </div>
+  <div id="statusLine" class="small"></div>
+</section>
+<section class="grid3" style="margin-top:16px;">
+  <section class="panel outline-domestic"><div class="colhead"><h2>Live feed</h2></div><div id="liveFeed"></div></section>
+  <section class="panel outline-economy"><div class="colhead"><h2>US stocks</h2></div><div id="usStocks"></div></section>
+  <section class="panel outline-economy"><div class="colhead"><h2>Crypto</h2></div><div id="crypto"></div></section>
+</section>
+
+    
+    <div id="modal" class="modal" hidden>
+      <div class="modalBack"></div>
+      <div id="modalBody" class="modalCard"></div>
+    </div>
+    
+    <footer>PlainFacts • plainfacts.org</footer>
+  </div>
+  <script src="/js/app.js"></script>
+</body>
+</html>

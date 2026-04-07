@@ -1,0 +1,27 @@
+services:
+  api:
+    build: ./api
+    ports:
+      - "8000:8000"
+    environment:
+      - CONGRESS_API_KEY=${CONGRESS_API_KEY:-}
+      - GOVINFO_API_KEY=${GOVINFO_API_KEY:-}
+
+  push:
+    build: ./push
+    ports:
+      - "8787:8787"
+    environment:
+      - PLAINFACTS_API_BASE=http://api:8000
+      - PUSH_POLL_SECONDS=${PUSH_POLL_SECONDS:-900}
+      - TOPIC_COOLDOWN_SECONDS=${TOPIC_COOLDOWN_SECONDS:-21600}
+      - DAILY_DEVICE_CAP=${DAILY_DEVICE_CAP:-20}
+    depends_on:
+      - api
+
+  web:
+    build: ./web
+    ports:
+      - "5173:80"
+    depends_on:
+      - api

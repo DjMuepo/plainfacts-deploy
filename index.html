@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PlainFacts</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script>window.API_BASE = `${location.origin}/api`;</script>
+</head>
+<body data-page="home">
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">PF</div>
+        <div>
+          <div class="title">PlainFacts</div>
+          <div class="sub">Plain facts. Plain language. Sources included.</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="/index.html" class="active">Home</a>
+        <a href="/global.html">Global</a>
+        <a href="/domestic.html">Domestic</a>
+        <a href="/economy.html">Economy</a>
+        <a href="/markets.html">Markets</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/share.html">Share</a>
+        <a href="/account.html">Account</a>
+      </nav>
+    </header>
+
+    <section class="heroGrid">
+      <section class="panel hero panelTall">
+        <h1>News without the noise.</h1>
+        <p>Plain language summaries with source links, evidence, and category pages for Global, Domestic, and Economy. No API field. No setup required for readers.</p>
+        <div class="searchRow">
+          <select id="searchMode" class="select">
+            <option value="news" selected>News</option>
+            <option value="markets">Markets</option>
+          </select>
+          <input id="searchInput" class="input" placeholder="Search news or market topics" />
+          <button id="goBtn" class="btn">Search</button>
+        </div>
+        <div id="statusLine" class="small"></div>
+        <div class="statGrid">
+          <div class="statCard"><div class="big">3</div><div class="small">Core categories</div></div>
+          <div class="statCard"><div class="big">/api</div><div class="small">Same-origin deployment path</div></div>
+          <div class="statCard"><div class="big">Web + Ext + Mobile</div><div class="small">Shared API foundation</div></div>
+        </div>
+      </section>
+      <section class="panel panelTall">
+        <div class="colhead"><h2>Platform build</h2><span class="extensionBadge">Production alpha</span></div>
+        <p class="small">This package includes the online tool, a Chrome extension starter, and an Expo mobile starter that share the same backend.</p>
+        <div class="cards">
+          <article class="card"><div class="cardtitle">Online tool</div><p class="cardsummary">Three-column homepage, category pages, search, market panels, and detail modal.</p></article>
+          <article class="card"><div class="cardtitle">Browser extension</div><p class="cardsummary">Popup search, quick briefs, and same-origin API configuration file for Chrome.</p></article>
+          <article class="card"><div class="cardtitle">Mobile app</div><p class="cardsummary">Expo starter with tabs for Home, Search, and Markets using the same PlainFacts API.</p></article>
+        </div>
+      </section>
+    </section>
+
+    <section class="cols">
+      <section class="panel col outline-global">
+        <div class="colhead"><h2><a href="/global.html">Global</a></h2><span class="chip">Top 3</span></div>
+        <div class="cards" id="globalTop"></div>
+        <div class="moreRow"><a href="/global.html">See more →</a></div>
+      </section>
+      <section class="panel col outline-domestic">
+        <div class="colhead"><h2><a href="/domestic.html">Domestic</a></h2><span class="chip">Top 3</span></div>
+        <div class="cards" id="domesticTop"></div>
+        <div class="moreRow"><a href="/domestic.html">See more →</a></div>
+      </section>
+      <section class="panel col outline-economy">
+        <div class="colhead"><h2><a href="/economy.html">Economy / Money</a></h2><span class="chip">Top 3</span></div>
+        <div class="cards" id="economyTop"></div>
+        <div class="moreRow"><a href="/economy.html">See more →</a></div>
+      </section>
+    </section>
+
+    <div id="modal" class="modal" hidden>
+      <div class="modalBack"></div>
+      <div id="modalBody" class="modalCard"></div>
+    </div>
+
+    <footer>
+      PlainFacts • plainfacts.org
+      <div class="footerLinks">
+        <span>Online tool</span>
+        <span>Chrome extension starter included</span>
+        <span>Expo mobile starter included</span>
+      </div>
+    </footer>
+  </div>
+  <script src="/js/app.js"></script>
+</body>
+</html>
